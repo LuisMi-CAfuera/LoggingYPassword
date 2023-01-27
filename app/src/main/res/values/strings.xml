@@ -4,4 +4,9 @@
     <string name="Registro">Registro</string>
     <string name="Usuario">Usuario</string>
     <string name="Contraseña">Contraseña</string>
+    <string name="Nombr">Nombre Usuario</string>
+    <string name="Sexo">Sexo</string>
+    <string name="Nacionalidad">Nacionalidad</string>
+    <string name="Aficiones">Aficiones</string>
+    <string name="Cancelar">Cancelar</string>
 </resources>
