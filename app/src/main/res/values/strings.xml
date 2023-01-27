@@ -11,4 +11,15 @@
     <string name="Cancelar">Cancelar</string>
     <string name = "H">H</string>
     <string name = "M">M</string>
+    <string-array name="Nacionalidades">
+        <item>Argentina</item>
+        <item>Chile</item>
+        <item>Colombia</item>
+        <item>Peru</item>
+        <item>Uruguay</item>
+    </string-array>
+    <string name="Tenis">Tenis</string>
+    <string name="Futbol">Futbol</string>
+    <string name="CV">CV Resumido</string>
+    <string name="Registrar">Registrar</string>
 </resources>
