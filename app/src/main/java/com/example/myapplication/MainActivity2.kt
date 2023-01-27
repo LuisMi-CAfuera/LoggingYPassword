@@ -21,8 +21,8 @@ class MainActivity2 : AppCompatActivity() {
 
         binding.Registrar.setOnClickListener{
             val intent = Intent(this@MainActivity2, MainActivity::class.java)
-            intent.putExtra("LOGIN", login)
-            intent.putExtra("PASS", pass)
+            intent.putExtra("LOGIN2", login)
+            intent.putExtra("PASS2", pass)
             startActivity(intent)
         }
     }

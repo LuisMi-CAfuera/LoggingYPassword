@@ -16,9 +16,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        var login = intent.getStringExtra("LOGIN")
-        var pass = intent.getStringExtra("PASS")
+        var login :String
+        var pass :String
         //si usurio y contraseña estan vacios no se puede iniciar sesion
+        login = intent.getStringExtra("LOGIN2").toString()
+        pass = intent.getStringExtra("PASS2").toString()
 
 
         binding.PassEdit.addTextChangedListener(object : TextWatcher {
@@ -31,10 +33,11 @@ class MainActivity : AppCompatActivity() {
 
             }
             override fun afterTextChanged(s: Editable?) {
-                if ((login.isNullOrEmpty() && pass.isNullOrEmpty()) && !binding.UsuarioEdit.text.toString().equals(binding.PassEdit.text.toString())) {
+
+                if (pass == null && binding.UsuarioEdit.text.toString() != binding.PassEdit.text.toString()) {
                     Toast.makeText(this@MainActivity, "Usuario y contraseña incorrectos o no te has registrado", Toast.LENGTH_SHORT).show()
                     binding.Login.isEnabled = false
-                } else if(!(login.isNullOrEmpty() && pass.isNullOrEmpty()) && binding.UsuarioEdit.text.toString().equals(binding.PassEdit.text.toString())){
+                } else if( (login.isNotEmpty() && pass.isNotEmpty()) && binding.UsuarioEdit.text.toString() == binding.PassEdit.text.toString()){
                     binding.Login.isEnabled = true
                 }
             }
