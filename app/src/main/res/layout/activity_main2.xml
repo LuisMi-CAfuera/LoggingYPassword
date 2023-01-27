@@ -57,19 +57,69 @@
         app:layout_constraintHorizontal_bias="0.434"
         app:layout_constraintStart_toEndOf="@+id/Contraseña2"
         app:layout_constraintTop_toBottomOf="@+id/NombreEdit"
-        app:layout_constraintVertical_bias="0.016"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/Sexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Sexo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Contraseña2"
+        app:layout_constraintVertical_bias="0.096" />
+
+    <RadioButton
+        android:id="@+id/H"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/H"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/M"
+        app:layout_constraintStart_toEndOf="@+id/Sexo"
+        app:layout_constraintTop_toBottomOf="@+id/ContraseñaEdit2"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <RadioButton
+        android:id="@+id/M"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/M"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/H"
+        app:layout_constraintTop_toBottomOf="@+id/ContraseñaEdit2"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/Nacionalidad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintHorizontal_bias="0.209"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Contraseña2"
-        app:layout_constraintVertical_bias="0.09" />
+        app:layout_constraintTop_toBottomOf="@+id/Sexo"
+        app:layout_constraintVertical_bias="0.103" />
+
+    <EditText
+        android:id="@+id/Nacionalidad2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:maxLines="5"
+        android:scrollbars="vertical"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintStart_toEndOf="@+id/Nacionalidad"
+        app:layout_constraintTop_toBottomOf="@+id/H"
+        app:layout_constraintVertical_bias="0.066" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
