@@ -16,9 +16,11 @@ class MainActivity2 : AppCompatActivity() {
         binding = ActivityMain2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //Aqui creamos las variables de login y pass
         var login = ""
         var pass = ""
 
+        //Aqui ponemos los usuarios y contraseñas
         binding.NombreEdit.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
@@ -43,6 +45,7 @@ class MainActivity2 : AppCompatActivity() {
             }
         })
 
+        //Este es el boton que te lleva a la activity de login para poder logearse
         binding.Registrar.setOnClickListener{
             val intent = Intent(this@MainActivity2, MainActivity::class.java)
 

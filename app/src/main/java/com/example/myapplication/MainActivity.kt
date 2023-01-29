@@ -16,12 +16,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //Aqui creamos las variables de login y pass
         var login :String
         var pass :String
-        //si usurio y contraseña estan vacios no se puede iniciar sesion
+
+        //Aqui cogemos los datos de la otra activity
         login = intent.getStringExtra("LOGIN2").toString()
         pass = intent.getStringExtra("PASS2").toString()
 
+        //Aqui desactivamos el boton de login si el usuario y la contraseña coinciden
 
         binding.PassEdit.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -33,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
             }
             override fun afterTextChanged(s: Editable?) {
-                    //Si login y pass y la contraseña y el usuario no son iguales no se puede iniciar sesion
+
                     if (login == binding.UsuarioEdit.text.toString() && pass == binding.PassEdit.text.toString()) {
                         binding.Login.isEnabled = true
                     } else {
@@ -48,7 +52,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
+        //Este es el boton que te lleva a la ultima activity
         binding.Login.setOnClickListener {
             login = binding.UsuarioEdit.text.toString()
             pass = binding.PassEdit.text.toString()
@@ -58,6 +62,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        //Este es el boton que te lleva a la activity de registro
         binding.Registro.setOnClickListener {
             val intent = Intent(this@MainActivity, MainActivity2::class.java)
             startActivity(intent)

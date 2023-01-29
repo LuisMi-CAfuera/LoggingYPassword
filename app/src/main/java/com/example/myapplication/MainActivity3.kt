@@ -19,7 +19,7 @@ class MainActivity3 : AppCompatActivity() {
         val pass = intent.getStringExtra("PASS").toString()
 
 
-
+        //Te da la bienvenida con el nombre de usuario
         binding.bienvenida.text = "Bienvenido $login"
 
 
