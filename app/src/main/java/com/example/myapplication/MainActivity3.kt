@@ -1,11 +1,28 @@
 package com.example.myapplication
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.myapplication.databinding.ActivityMain3Binding
+
 
 class MainActivity3 : AppCompatActivity() {
+    private lateinit var binding: ActivityMain3Binding
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main3)
+        binding = ActivityMain3Binding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
+        val login = intent.getStringExtra("LOGIN").toString()
+        val pass = intent.getStringExtra("PASS").toString()
+
+
+
+        binding.bienvenida.text = "Bienvenido $login"
+
+
+
     }
 }

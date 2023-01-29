@@ -46,7 +46,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
-        android:id="@+id/ContraseñaEdit2"
+        android:id="@+id/ContraEdit2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -80,7 +80,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/M"
         app:layout_constraintStart_toEndOf="@+id/Sexo"
-        app:layout_constraintTop_toBottomOf="@+id/ContraseñaEdit2"
+        app:layout_constraintTop_toBottomOf="@+id/ContraEdit2"
         app:layout_constraintVertical_bias="0.05" />
 
     <RadioButton
@@ -91,7 +91,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/H"
-        app:layout_constraintTop_toBottomOf="@+id/ContraseñaEdit2"
+        app:layout_constraintTop_toBottomOf="@+id/ContraEdit2"
         app:layout_constraintVertical_bias="0.05" />
 
     <TextView
@@ -160,15 +160,15 @@
         android:text="@string/CV"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.209"
+        app:layout_constraintHorizontal_bias="0.144"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Aficiones"
-        app:layout_constraintVertical_bias="0.323" />
+        app:layout_constraintVertical_bias="0.107" />
 
     <EditText
         android:id="@+id/editTextTextMultiLine2"
-        android:layout_width="288dp"
-        android:layout_height="125dp"
+        android:layout_width="329dp"
+        android:layout_height="131dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
@@ -178,10 +178,10 @@
         android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintHorizontal_bias="0.406"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.171" />
+        app:layout_constraintVertical_bias="0.179" />
 
     <Button
         android:id="@+id/Cancel"

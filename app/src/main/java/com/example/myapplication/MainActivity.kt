@@ -33,13 +33,13 @@ class MainActivity : AppCompatActivity() {
 
             }
             override fun afterTextChanged(s: Editable?) {
-
-                if (pass == null && binding.UsuarioEdit.text.toString() != binding.PassEdit.text.toString()) {
-                    Toast.makeText(this@MainActivity, "Usuario y contraseña incorrectos o no te has registrado", Toast.LENGTH_SHORT).show()
-                    binding.Login.isEnabled = false
-                } else if( (login.isNotEmpty() && pass.isNotEmpty()) && binding.UsuarioEdit.text.toString() == binding.PassEdit.text.toString()){
-                    binding.Login.isEnabled = true
-                }
+                    //Si login y pass y la contraseña y el usuario no son iguales no se puede iniciar sesion
+                    if (login == binding.UsuarioEdit.text.toString() && pass == binding.PassEdit.text.toString()) {
+                        binding.Login.isEnabled = true
+                    } else {
+                        binding.Login.isEnabled = false
+                        Toast.makeText(this@MainActivity, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
+                    }
             }
         })
 
