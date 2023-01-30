@@ -45,6 +45,16 @@ class MainActivity2 : AppCompatActivity() {
             }
         })
 
+        //Si el radioButton h esta seleccionado se quita el otro
+        binding.H.setOnClickListener{
+            binding.M.isChecked = false
+        }
+        //Si el radioButton m esta seleccionado se quita el otro
+        binding.M.setOnClickListener{
+            binding.H.isChecked = false
+        }
+
+
         //Este es el boton que te lleva a la activity de login para poder logearse
         binding.Registrar.setOnClickListener{
             val intent = Intent(this@MainActivity2, MainActivity::class.java)
